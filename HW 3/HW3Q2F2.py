@@ -3,7 +3,7 @@ Name: Eric Li
 ID: A20419312
 Homework 3 - Functions and Functions on a Separate File
 
-
+This program takes in retail price entered by the user. 
 
 Question 2
 Given a complete program below, rewrite the program using functions. Create at 
