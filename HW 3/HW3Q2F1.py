@@ -15,7 +15,7 @@ you have created in Question #1.
 import HW3Q2F2 as f4
 def retail():
     # This program calculates retail prices.
-    mark_up = 2.5 # The markup percentage
+    mark_up = 0.025 # The markup percentage
     another = 'y' # Variable to control the loop.
     
     # Process one or more items.
@@ -28,7 +28,7 @@ def retail():
             print('ERROR: the cost cannot be negative.')
             a = float(input('Enter the correct wholesale cost:'))
         # Calculate the retail price.
-        retail = a * mark_up
+        retail = a + (a * mark_up)
         # Display the retail price.
         print('Retail price: $', format(retail, ',.2f'))
         # Do this again?
