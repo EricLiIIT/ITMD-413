@@ -42,7 +42,6 @@ def calc(prices): # This method primarily prints the input & processed informati
     print("The total with sales tax is: ", '${:.2f}'.format(gt))       
 
 def multiplyMatrix(m1, m2):
-
     matrix = m1 @ m2
     print(matrix)
     

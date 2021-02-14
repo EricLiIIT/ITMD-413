@@ -22,9 +22,8 @@ from SellItems import *
 import numpy as np
 
 def main():
-    #calc(item())
+    calc(item())
     # These take in the values for the first matrix
-
     b = range(3) 
     m1a = []
     m1b = []
