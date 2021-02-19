@@ -1,0 +1,7 @@
+Marketing             , 50
+Information_Technology , 275
+Management            , 230
+Human_Resources       , 250
+Finance               , 92
+Supply_Chain          , 73
+Manufacturing         , 30
