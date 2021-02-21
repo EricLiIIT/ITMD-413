@@ -48,10 +48,11 @@ def main():
         yearList = []
         profitList = []
         
+        
         while r2 != "":
             data = r2.split()
             year = data[0]
-            profit = data[2]
+            profit = eval(data[2].replace(',','').replace('$',''))
             profitList.append(profit)
             yearList.append(year)
             r2 = f2r.readline()
@@ -71,6 +72,8 @@ def main():
         plt.ylabel("Profit (USD)")
         plt.show()
     
+    
+        print(yearList, profitList)
     else:
        print("File does not exist in the directory.")
             
