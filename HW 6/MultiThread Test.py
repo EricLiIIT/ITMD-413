@@ -1,8 +1,7 @@
 import time
 import random
 import matplotlib.pyplot as plt
-import numpy as np
-import threading
+import multiprocessing
 
 # Python program for implementation of Bubble Sort
 # From: https://www.geeksforgeeks.org/python-program-for-bubble-sort/
@@ -68,13 +67,14 @@ def ninetyK():
     return test_list
 
 # ===============Bubble Sort=============== # 
-def multiTest():
+def t1():
     print("Sorting 10k elements...")
     st1 = time.time() # Starts timer
     bubbleSort(tenK())
     BSend1 = format((time.time()-st1), '.2f')
     print("Time to sort for 10k elements: ", BSend1, "seconds")
-def multiTest2():
+    print(1)
+def t2():
     print("Sorting 30k elements...")
     st2 = time.time() 
     bubbleSort(thirtyK())
@@ -100,19 +100,16 @@ BSend5 = format((time.time()-st5), '.2f')
 print("Time to sort for 90k elements: ", BSend5, "seconds")
 '''
 # ===============Multi-Threaded Support=============== #
-#t1 = threading.Thread(target=bubbleSort(tenK()))
+#if __name__ == "__main__":
+p1 = multiprocessing.Process(target=t1)
+#p2 = multiprocessing.Process(target=t2)
 
-if __name__ == "__main__":
-    t1 = threading.Thread(target=multiTest())
-    t2 = threading.Thread(target=multiTest2())
-    
-    
-    t1.start()
-    t2.start()
-    
-    #t2.join()
-    
-    print("threading done")
+p1.start()
+#p2.start()
+
+p1.join()
+#p2.join()
+
 
 
 

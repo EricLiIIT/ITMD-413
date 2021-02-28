@@ -1,12 +1,13 @@
 # Python program to illustrate the concept 
 # of threading 
-import threading 
+from multiprocessing import Process
 import os 
 import random
   
 def task1():  
-    print("Task 1 assigned to thread: {}".format(threading.current_thread().name)) 
+    #print("Task 1 assigned to thread: {}".format(threading.current_thread().name)) 
     print("ID of process running task 1: {}".format(os.getpid())) 
+    print(1)
 
 def bubbleSort(test_list): 
     n = len(test_list) 
@@ -30,31 +31,31 @@ def task2():
         a = random.randint(1,10000) # 1 and 10k are included
         test_list.append(a)
     #print(test_list)
-    print("Task 2 assigned to thread: {}".format(threading.current_thread().name)) 
+    #print("Task 2 assigned to thread: {}".format(threading.current_thread().name)) 
     print("ID of process running task 2: {}".format(os.getpid())) 
     return test_list
     
     
 
 
-if __name__ == "__main__": 
+if __name__ == '__main__': 
   
     # print ID of current process 
-    print("ID of process running main program: {}".format(os.getpid())) 
+    #print("ID of process running main program: {}".format(os.getpid())) 
   
     # print name of main thread 
-    print("Main thread name: {}".format(threading.current_thread().name)) 
+    #print("Main thread name: {}".format(threading.current_thread().name)) 
   
     # creating threads 
-    t1 = threading.Thread(target=task1, name='t1') 
-    t2 = threading.Thread(target=bubbleSort(task2()), name='t2')   
+    t1 = Process(target=task1) 
+    #t2 = multiprocessing.Process(target=bubbleSort)   
   
     # starting threads 
-    t2.start() 
+    #t2.start() 
     t1.start() 
   
     # wait until all threads finish 
-    '''
+    
     t1.join() 
-    t2.join() 
-    '''
+    #t2.join() 
+    #print(1)
