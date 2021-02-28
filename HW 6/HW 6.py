@@ -24,9 +24,9 @@ import matplotlib.pyplot as plt
 
 # print(test_list) is intentionally commented out -- for debugging purposes
 
-# =============== Bubble Sort Algorithim =============== # 
+# =============== Bubble Sort Algorithm =============== # 
 # From: https://www.geeksforgeeks.org/python-program-for-bubble-sort/
-def bubble_sort(test_list): # Bubble Sort Algorithim
+def bubble_sort(test_list): # Bubble Sort Algorithm
     n = len(test_list) 
     # Traverse through all array elements 
     for i in range(n-1): 
@@ -40,7 +40,7 @@ def bubble_sort(test_list): # Bubble Sort Algorithim
                 test_list[j], test_list[j+1] = test_list[j+1], test_list[j] 
     #print(test_list)
     
-# =============== Shell Sort Algorithim =============== # 
+# =============== Shell Sort Algorithm =============== # 
 # By Mohit Kumra
 # This function takes last element as pivot, places 
 # the pivot element at its correct position in sorted 
@@ -49,7 +49,7 @@ def bubble_sort(test_list): # Bubble Sort Algorithim
 # of pivot. 
 
 # From https://www.geeksforgeeks.org/python-program-for-shellsort/
-def shell_sort(test_list): # Shell Sort Algorithim
+def shell_sort(test_list): # Shell Sort Algorithm
     # Start with a big gap, then reduce the gap 
     n = len(test_list) 
     gap = n//2
@@ -79,7 +79,7 @@ def shell_sort(test_list): # Shell Sort Algorithim
         gap /= 2
 
 
-# =============== Quick Sort Algorithim =============== # 
+# =============== Quick Sort Algorithm =============== # 
 # By Mohit Kumra
 def partition(test_list, low, high): 
     i = (low-1)         # index of smaller element 
@@ -170,7 +170,7 @@ def ninetyK():
 
 # =============== Bubble Sort Run =============== # 
 def bubble_sort_exe():
-    print("Sort with Bubble Sort Algorithim ->")
+    print("Sort with Bubble Sort Algorithm ->")
     print("Sorting 10k elements...")
     st1 = time.time() # Starts timer
     bubble_sort(tenK())
@@ -206,7 +206,7 @@ def bubble_sort_exe():
 
 # =============== Shell Sort Run =============== # 
 def shell_sort_exe():
-    print("Sort with Shell Sort Algorithim")
+    print("Sort with Shell Sort Algorithm")
     print("Sorting 10k elements...")
     st1 = time.time() 
     shell_sort(tenK())
@@ -242,7 +242,7 @@ def shell_sort_exe():
     
 # =============== Quick Sort Run =============== # 
 def quick_sort_exe():
-    print("Sort with Quick Sort Algorithim")
+    print("Sort with Quick Sort Algorithm")
     print("Sorting 10k elements...")
     st1 = time.time()
     quick_sort(tenK(), 0, len(tenK())-1)
