@@ -20,6 +20,7 @@ Shell, and Quicksort) and illustratively represents the results.
 '''
 import time
 import random
+#import numpy as np
 import matplotlib.pyplot as plt
 
 # print(test_list) is intentionally commented out -- for debugging purposes
@@ -284,19 +285,34 @@ bs_bar = plt.bar(elem_size, bs_time)
 plt.title("Bubble Sorting Times")
 plt.xlabel("List Size")
 plt.ylabel("Time in Seconds")
+plt.show()
 
 ss_time = shell_sort_exe()
 ss_bar = plt.bar(elem_size, ss_time)
 plt.title("Shell Sort Times")
 plt.xlabel("List Size")
 plt.ylabel("Time in Seconds")
+plt.show()
 
 qs_time = quick_sort_exe()
 qs_bar = plt.bar(elem_size, qs_time)
 plt.title("Quick Sort Times")
 plt.xlabel("List Size")
 plt.ylabel("Time in Seconds")
+plt.show()
 
+#---Testing---#
+# data = [ss_time,
+# ss_time,
+# qs_time]
+# X = np.arange(10, 100, 20)
+# fig = plt.figure()
+# ax = fig.add_axes([0,0,1,1])
+# ax.bar(X - 0, data[0], color = 'b', width = 10, align='center')
+# ax.bar(X + 10, data[1], color = 'g', width = 10, align='center')
+# ax.bar(X + 20, data[2], color = 'r', width = 10, align='center')
+# ax.set_title("Comparative Times for Sorting Algorithms")
+# ax.set_xlabel("List Size")
 
 #---For Debugging---#
 #bubble_sort_exe()
