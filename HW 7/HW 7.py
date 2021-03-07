@@ -35,7 +35,8 @@ def q1():
     
     for i in file:
         i = i.split(':')
-        username = i[0]
+        # Code below takes position of each piece of data
+        username = i[0] 
         first_name = i[1]
         last_name = i[2]
         phone_number = i[3]
@@ -48,12 +49,14 @@ def q1():
 def q2():
     # For quesion 2
     phone_number_input = input("Enter phone number: ")
-    pattern1 = r'[0-9]+'
-    match = re.findall(pattern1, phone_number_input)
-    delimiter = ''
-    fn = delimiter.join(match)
+    pattern1 = r'[0-9]+' # This pattern takes only 1 or more numbers
+    
+    # Go thru list finding numbers --  returns list of strings
+    match = re.findall(pattern1, phone_number_input) 
+    delimiter = '' # Closes gaps between strings
+    fn = delimiter.join(match) # Creates singluar phone number string
     if len(fn) != 10:
-        print("Enter correct quantity of digits")
+        print("Error: Enter correct quantity of digits")
     else:
         print(f"Formatted phone number: ({fn[0:3]}) {fn[3:6]} {fn[6:11]}")
 

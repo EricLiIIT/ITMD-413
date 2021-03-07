@@ -80,13 +80,13 @@ def shell_sort(test_list): # Shell Sort Algorithm
         gap /= 2
 
 
-# =============== Quick Sort Algorithm =============== # 
+# =============== Quick Sort Algorithm =============== #
 # By Mohit Kumra
-def partition(test_list, low, high): 
-    i = (low-1)         # index of smaller element 
-    pivot = test_list[high]     # pivot 
+def partition(test_list, low, high):
+    i = (low-1)         # index of smaller element
+    pivot = test_list[high]     # pivot
   
-    for j in range(low, high): 
+    for j in range(low, high):
   
         # If current element is smaller than or 
         # equal to pivot 
