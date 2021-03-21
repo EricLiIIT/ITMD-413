@@ -98,11 +98,11 @@ def q2():
   filename = "titanic.csv"
   df = pd.read_csv(filename) # This creates a dataframe from the csv
   z = df.Name.describe()
-  #print(df.dtypes) #a
-  #print(z)
-  #print(df.sex.value_counts()) #b
-  #print(df.mean()) #c
-  #print(df[df.age < 21]) #d
+  print(df.dtypes) # part a
+  print(z)
+  print(df.sex.value_counts()) #part b
+  print(df.mean()) #part c
+  print(df[df.age < 21]) #part d
   survived = df.loc[df['survived'] == 'yes']
   died = df.loc[df['survived'] == 'no']
   males_survived = survived.loc[survived['sex'] == 'male']
@@ -110,24 +110,20 @@ def q2():
   females_survived = survived.loc[survived['sex'] == 'female']
   females_died = died.loc[died['sex'] == 'female']
   # part e
-  '''
   print("Total survived: ", len(survived))
   print("Total died", len(died))
   print("Total males survived: ", len(males_survived))
   print("Total males died: ", len(males_died))
   print("Total females survived: ", len(females_survived))
   print("Total females died: ", len(females_died))
-  '''
   y = df.describe()
   #print(y)
   print("The name and age of the oldest that survived: ", '\n', df.sort_values('age', ascending=False).head(1)) # part f
-  #print(y.max())
   print('The age of the youngest survivor', survived.loc[1:, ['age']].min())
   print('The name of the youngest survivor', survived.loc[survived['age'] == float(survived.loc[1:, ['age']].min()), ['Name']])
   # part g
   names_survived = survived.loc[1:,['Name']]
   pd.set_option('display.max_rows', None)
-  #print(names_survived)
-  #print(Name.loc[survived == 'yes'])
-#q1()
+  print(names_survived)
+q1()
 q2()
