@@ -95,6 +95,7 @@ def q1():
   print(temperatures.transpose().sort_index())  # o.
 
 def q2():
+  print('Question 2')
   filename = "titanic.csv"
   df = pd.read_csv(filename) # This creates a dataframe from the csv
   z = df.Name.describe()
