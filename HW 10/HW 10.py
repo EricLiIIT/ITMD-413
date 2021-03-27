@@ -52,7 +52,7 @@ def all(file_read):
   print(file_read) # Prints entire list of names and employees
 
 def delete_all(file_read): # Deletes content of entire file
-  del file_read
+  file_read.clear()
   print("Successfully deleted all entries")
 
 def main():
