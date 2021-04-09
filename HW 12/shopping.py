@@ -1,7 +1,7 @@
 from restaurant import *
 from grocery_store import *
 
-def main():
+def main(): # Creates instances of restaurant and grocery_store classes
   restaurant1 = Restaurant("Bob's Burgers", "1111 North Main Street", "Open", 0.12, 223, 250, 22, 12)
   restaurant1.tostring()
   print("\n")

@@ -1,6 +1,7 @@
 from store import *
 
 class Grocery_Store(Store):
+  # Default constructor
   def __init__(self, name, address, availability, sales_tax, total_revenue, store_type):
     super().__init__(name, address, availability, sales_tax)
     self.total_revenue = total_revenue
@@ -19,7 +20,7 @@ class Grocery_Store(Store):
   def get_store_type(self):
     return self.store_type
 
-  def tostring(self):
+  def tostring(self): # Method to print attributes of grocery store
     print(self.store_name)
     print(self.address)
     print(self.availability)

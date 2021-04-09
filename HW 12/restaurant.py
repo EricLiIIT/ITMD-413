@@ -1,6 +1,7 @@
 from store import *
 
 class Restaurant(Store):
+  # Default constructor
   def __init__(self, name, address, availability, sales_tax, total_served, max_occupancy, current_occupancy, ppp): # ppp is price per person
     super().__init__(name, address, availability, sales_tax)
     self.total_served = total_served
@@ -36,7 +37,7 @@ class Restaurant(Store):
   def get_ppp(self):
     return self.ppp
 
-  def tostring(self):
+  def tostring(self): # Method to print restaurant attributes
     print(self.store_name)
     print(self.address)
     print(self.availability)

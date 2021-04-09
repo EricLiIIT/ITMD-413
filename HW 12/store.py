@@ -6,7 +6,6 @@ HW 12
 
 This program demonstrates the use implementation of object oriented programming.
 """
-
 from abc import ABC, abstractmethod
 import datetime
 
@@ -17,6 +16,7 @@ class Store(ABC):
     self.address = address
     self.availability = availability
     self.sales_tax = sales_tax
+    super().__init__(name, address, availability, sales_tax)
 
   def get_name(self, name):
     self.store_name = name
@@ -42,8 +42,10 @@ class Store(ABC):
   def set_sales_tax(self, sales_tax):
     return(self.sales_tax)
 
+  @abstractmethod
   def calculate_total_sales_tax(self):
     pass
 
+  @abstractmethod
   def calculate_total_sales(self):
     pass
