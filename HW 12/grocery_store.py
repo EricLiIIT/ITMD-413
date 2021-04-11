@@ -8,11 +8,11 @@ class Grocery_Store(Store):
     self.store_type = store_type
 
   def sell_item(self):
-    quantity = eval(input("Input quantity of item: "))
-    price = eval(input("Enter price of item: "))
+      quantity = eval(input("Input quantity of item: "))
+      price = eval(input("Enter price of item: "))
 
-    total_revenue = price*quantity
-    return total_revenue
+      self.total_revenue = price*quantity
+      return self.total_revenue
 
   def set_store_type(self, store_type):
     self.store_type = store_type
@@ -27,3 +27,9 @@ class Grocery_Store(Store):
     print(self.sales_tax)
     print(self.total_revenue)
     print(self.store_type)
+
+  def calculate_total_sales_tax(self):
+    return self.total_revenue * self.sales_tax
+
+  def calculate_total_sales(self):
+     return self.total_revenue

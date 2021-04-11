@@ -16,31 +16,30 @@ class Store(ABC):
     self.address = address
     self.availability = availability
     self.sales_tax = sales_tax
-    super().__init__(name, address, availability, sales_tax)
 
-  def get_name(self, name):
-    self.store_name = name
-
-  def set_name(self, name):
+  def get_name(self):
     return(self.store)
 
-  def get_address(self, address):
-    self.address = address
+  def set_name(self, name):
+    self.store_name = name
 
-  def set_address(self, address):
+  def get_address(self):
     return(self.address)
 
-  def get_availability(self, availability):
-    self.availability = availability
+  def set_address(self, address):
+    self.address = address
 
-  def set_availability(self, availability):
+  def get_availability(self):
     return(self.availability)
 
-  def get_sales_tax(self, sales_tax):
-    self.sales_tax = sales_tax
+  def set_availability(self, availability):
+    self.availability = availability
+
+  def get_sales_tax(self):
+    return(self.sales_tax)
 
   def set_sales_tax(self, sales_tax):
-    return(self.sales_tax)
+    self.sales_tax = sales_tax
 
   @abstractmethod
   def calculate_total_sales_tax(self):
