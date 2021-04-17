@@ -1,3 +1,12 @@
+"""
+Author: Eric Li
+A20419312
+ITMD 413
+HW 13 - Coin GUI
+
+This program involves using a GUI to take in a user input amount of coins and calculates the total they all sum to.
+"""
+
 import tkinter as tk
 from tkinter import *
 
@@ -59,6 +68,7 @@ class Coin():
   def get_pen(self):
     return pen
 
+# Calculates the total based on the amount of each coin
 def calculate(root, dol_in, hdol_in, quart_in, dime_in, nick_in, pen_in):
   try:
     dol_in = int(dol_in.get())

@@ -2,7 +2,7 @@
 Author: Eric Li
 A20419312
 ITMD 413
-HW 13
+HW 13 - Password Checking with Recursive Functions
 
 This program uses recursion to test if a user-input password contains at least one digit.
 """
