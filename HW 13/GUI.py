@@ -50,18 +50,16 @@ class Coin():
     penny_ct = Label(root, bg="white", text="")
     penny_ct.grid(row=7, column=2)
 
-    self.btn = tk.Button(main, text="Submit", command=self.print_quantity).grid(row=8,column=1)
+    #self.btn = tk.Button(main, text="Submit", command=self.print_quantity).grid(row=8,column=1)
     self.btn2 = tk.Button(main, text="Calculate", command=self.calculate).grid(row=8,column=2)
 
-  def print_quantity(self, dollar, dollar_ct, half_dollar, half_dollar_ct, quarter, quarter_ct, dime, dime_ct, nickel, nickel_ct, penny, penny_ct):
+  #def calculate(self, dollar, half_dollar, quarter, dime, nickel, penny):
     self.dollar_ct.config(text=self.dollar.get())
     self.half_dollar_ct.config(text=self.half_dollar.get())
     self.quarter_ct.config(text=self.quarter.get())
     self.ime_ct.config(text=self.dime.get())
     self.nickel_ct.config(text=self.nickel.get())
     self.penny_ct.config(text=self.penny.get())
-
-  def calculate(self, dollar, half_dollar, quarter, dime, nickel, penny):
     total = float(self.dollar.get()) * 1
     total += float(self.half_dollar.get()) * 0.5
     total += float(self.quarter.get()) * 0.25
@@ -74,3 +72,10 @@ coin1 = Coin(root)
 root.mainloop()
 #messagebox.showinfo("Submitted", "Thank You!")
 
+#def print_quantity(self, dollar, dollar_ct, half_dollar, half_dollar_ct, quarter, quarter_ct, dime, dime_ct, nickel, nickel_ct, penny, penny_ct):
+    #self.dollar_ct.config(text=self.dollar.get())
+    #self.half_dollar_ct.config(text=self.half_dollar.get())
+    #self.quarter_ct.config(text=self.quarter.get())
+    #self.ime_ct.config(text=self.dime.get())
+    #self.nickel_ct.config(text=self.nickel.get())
+    #self.penny_ct.config(text=self.penny.get())
